@@ -6,6 +6,7 @@ const app = express();
 
 require('dotenv').config()
 const uri="mongodb+srv://book:book@cluster0.wuqmavi.mongodb.net/book?retryWrites=true&w=majority"
+// const uri="mongodb://127.0.0.1:27017/book_info"
 
 const connectDB = () => {
   try {
@@ -35,9 +36,9 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 
-if (process.env.NODE_ENV == "production") {
-    app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV == "production") {
+//     app.use(express.static("client/build"));
+// }
 // use Routes
 app.use('/api/books', books);
 
