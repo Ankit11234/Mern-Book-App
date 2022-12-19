@@ -11,7 +11,7 @@ const UpdateBookInfo = () => {
   const [book, setBook] = useState({});
   useEffect(() => {
     const run = () => {
-      axios.get(`/api/books/${id}`)
+      axios.get(`https://mern-book-api.onrender.com/${id}`)
         .then(res =>setBook(res.data))
     }
     run();
@@ -25,7 +25,7 @@ const UpdateBookInfo = () => {
  }
 
   const sendRequest = async() => {
-    await axios.put(`/api/books/${id}`, {
+    await axios.put(`https://mern-book-api.onrender.com/${id}`, {
       title: book.title,
       isbn:book.isbn,
       author:book.author,

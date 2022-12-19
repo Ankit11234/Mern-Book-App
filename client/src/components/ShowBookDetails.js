@@ -12,7 +12,7 @@ const ShowBookDetails = () => {
   const [book, setBook] = useState({});
   useEffect(() => {
     const run = () => {
-      axios.get(`/api/books/${id}`)
+      axios.get(`https://mern-book-api.onrender.com/${id}`)
         .then(res =>setBook(res.data))
     }
     run();
@@ -20,7 +20,7 @@ const ShowBookDetails = () => {
 
 
   const del = async () => {
-    await axios.delete(`/api/books/${id}`)
+    await axios.delete(`https://mern-book-api.onrender.com/${id}`)
       .then(res => setBook(res.data))
       .then(() => history('/'));
   }

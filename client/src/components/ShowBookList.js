@@ -15,9 +15,10 @@ class ShowBookList extends Component {
 
   // .get('/')
   componentDidMount() {
-    axios
-    .get('/')
+    // .get('/')
     // .get('/api/books')
+    axios
+    .get('https://mern-book-api.onrender.com')
       .then(res => {
         this.setState({
           books: res.data

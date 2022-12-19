@@ -34,7 +34,7 @@ class CreateBook extends Component {
     };
 
     
-      axios.post('/api/books', data,{headers: {
+      axios.post('https://mern-book-api.onrender.com', data,{headers: {
         "Content-Type": "application/json",
         },})
       .then(res => {
