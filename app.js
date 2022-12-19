@@ -44,4 +44,8 @@ app.use('/api/books', books);
 
 const PORT = process.env.PORT || 8082;
 
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
