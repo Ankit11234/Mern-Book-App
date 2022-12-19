@@ -30,7 +30,10 @@ const connectDB = () => {
 connectDB();
 
 // cors
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ 
+  origin: ["http://localhost:3000",
+  "https://mern-book.onrender.com"], 
+  credentials: true }));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
