@@ -51,5 +51,6 @@ const PORT = process.env.PORT || 8082;
 // app.get('/', (req, res) => {
 //   res.sendStatus(200)
 // })
+// "proxy":"http://localhost:8082",
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
