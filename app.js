@@ -44,7 +44,8 @@ app.use(express.json({ extended: false }));
 //     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
 // }
 // use Routes
-app.use('/api/books', books);
+// app.use('/api/books', books);
+app.use('/', books);
 
 const PORT = process.env.PORT || 8082;
 
